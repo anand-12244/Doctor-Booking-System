@@ -8,7 +8,7 @@ const USER_CACHE_KEY = '@careconnect_user';
 
 const AppContextProvider = (props) => {
   const currencySymbol = "$";
-  const backendUrl = "http://192.168.1.110:4000";
+  const backendUrl = "https://native-g00v.onrender.com";
 
   const [doctors, setDoctors]   = useState([]);
   const [token, setToken]       = useState("");
