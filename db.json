@@ -1,0 +1,305 @@
+{
+  "doctors": [
+    {
+      "_id": "doc1",
+      "name": "Dr. Richard James",
+      "imageKey": "doc1",
+      "speciality": "General physician",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. He specializes in managing chronic diseases and promoting overall wellness.",
+      "fees": 50,
+      "address": {
+        "line1": "17th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc2",
+      "name": "Dr. Emily Larson",
+      "imageKey": "doc2",
+      "speciality": "Gynecologist",
+      "degree": "MBBS",
+      "experience": "3 Years",
+      "about": "Dr. Emily Larson is a compassionate gynecologist specializing in women's reproductive health, prenatal care, and minimally invasive surgeries. She ensures every patient is informed and comfortable throughout their care journey.",
+      "fees": 60,
+      "address": {
+        "line1": "27th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc3",
+      "name": "Dr. Sarah Patel",
+      "imageKey": "doc3",
+      "speciality": "Dermatologist",
+      "degree": "MBBS",
+      "experience": "1 Years",
+      "about": "Dr. Sarah Patel is a skilled dermatologist specializing in skin care, acne treatment, hair loss, and cosmetic procedures. She combines cutting-edge dermatology techniques with a personalized approach to achieve the best outcomes.",
+      "fees": 30,
+      "address": {
+        "line1": "37th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc4",
+      "name": "Dr. Christopher Lee",
+      "imageKey": "doc4",
+      "speciality": "Pediatricians",
+      "degree": "MBBS",
+      "experience": "2 Years",
+      "about": "Dr. Christopher Lee is a dedicated pediatrician who provides comprehensive care for children from newborns to adolescents. His gentle approach makes children feel at ease during consultations and treatments.",
+      "fees": 40,
+      "address": {
+        "line1": "47th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc5",
+      "name": "Dr. Jennifer Garcia",
+      "imageKey": "doc5",
+      "speciality": "Neurologist",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Jennifer Garcia specializes in diagnosing and treating disorders of the nervous system including migraines, epilepsy, stroke, and Parkinson's disease. She provides comprehensive neurological evaluations and personalized care plans.",
+      "fees": 50,
+      "address": {
+        "line1": "57th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc6",
+      "name": "Dr. Andrew Williams",
+      "imageKey": "doc6",
+      "speciality": "Neurologist",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Andrew Williams is a senior neurologist with deep expertise in movement disorders, neurodegenerative diseases, and clinical neurophysiology. He is highly regarded for his diagnostic precision and patient empathy.",
+      "fees": 50,
+      "address": {
+        "line1": "57th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {
+        "25_5_2026": [
+          "10:30 am"
+        ]
+      }
+    },
+    {
+      "_id": "doc7",
+      "name": "Dr. Christopher Davis",
+      "imageKey": "doc7",
+      "speciality": "General physician",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Christopher Davis is an experienced general physician dedicated to holistic patient care. He is known for his thorough examination techniques and patient-friendly approach to diagnosis and treatment.",
+      "fees": 50,
+      "address": {
+        "line1": "17th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc8",
+      "name": "Dr. Timothy White",
+      "imageKey": "doc8",
+      "speciality": "Gynecologist",
+      "degree": "MBBS",
+      "experience": "3 Years",
+      "about": "Dr. Timothy White has over 7 years of experience in obstetrics and gynecology. He is skilled in high-risk pregnancy management, laparoscopic procedures, and women's health consultations.",
+      "fees": 60,
+      "address": {
+        "line1": "27th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc9",
+      "name": "Dr. Ava Mitchell",
+      "imageKey": "doc9",
+      "speciality": "Dermatologist",
+      "degree": "MBBS",
+      "experience": "1 Years",
+      "about": "Dr. Ava Mitchell focuses on medical and cosmetic dermatology, treating conditions like psoriasis, eczema, fungal infections and providing aesthetic procedures like chemical peels and laser therapies.",
+      "fees": 30,
+      "address": {
+        "line1": "37th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc10",
+      "name": "Dr. Jeffrey King",
+      "imageKey": "doc10",
+      "speciality": "Pediatricians",
+      "degree": "MBBS",
+      "experience": "2 Years",
+      "about": "Dr. Jeffrey King has extensive experience in managing childhood diseases, developmental disorders, vaccinations, and nutritional guidance. He is known for his compassionate care and evidence-based treatment protocols.",
+      "fees": 40,
+      "address": {
+        "line1": "47th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc11",
+      "name": "Dr. Zoe Kelly",
+      "imageKey": "doc11",
+      "speciality": "Gastroenterologist",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Zoe Kelly specializes in digestive health, liver diseases, and gastrointestinal procedures like endoscopy and colonoscopy. She is known for her meticulous diagnostic approach and effective management of complex GI conditions.",
+      "fees": 50,
+      "address": {
+        "line1": "57th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc12",
+      "name": "Dr. Patrick Harris",
+      "imageKey": "doc12",
+      "speciality": "Neurologist",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Patrick Harris is an expert in treating conditions like IBS, Crohn's disease, ulcerative colitis, and GERD. His patient-first philosophy ensures accurate diagnosis and effective, minimally invasive treatment options.",
+      "fees": 50,
+      "address": {
+        "line1": "57th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc13",
+      "name": "Dr. Chloe Evans",
+      "imageKey": "doc13",
+      "speciality": "General physician",
+      "degree": "MBBS",
+      "experience": "4 Years",
+      "about": "Dr. Chloe Evans has extensive experience in internal medicine and general practice. She focuses on preventive care, vaccinations, and management of acute illnesses, ensuring every patient receives personalized care.",
+      "fees": 50,
+      "address": {
+        "line1": "17th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc14",
+      "name": "Dr. Ryan Martinez",
+      "imageKey": "doc14",
+      "speciality": "Gynecologist",
+      "degree": "MBBS",
+      "experience": "3 Years",
+      "about": "Dr. Ryan Martinez is a senior gynecologist with expertise in reproductive endocrinology, fertility treatments, and advanced laparoscopic surgeries. He brings world-class care to every patient.",
+      "fees": 60,
+      "address": {
+        "line1": "27th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    },
+    {
+      "_id": "doc15",
+      "name": "Dr. Amelia Hill",
+      "imageKey": "doc15",
+      "speciality": "Dermatologist",
+      "degree": "MBBS",
+      "experience": "1 Years",
+      "about": "Dr. Amelia Hill is an experienced dermatologist with a special interest in pediatric dermatology and allergy-related skin conditions. She is well-regarded for her patient-centric and evidence-based approach.",
+      "fees": 30,
+      "address": {
+        "line1": "37th Cross, Richmond",
+        "line2": "Circle, Ring Road, London"
+      },
+      "available": true,
+      "slots_booked": {}
+    }
+  ],
+  "users": [
+    {
+      "_id": "user_1779614286751",
+      "name": "Amit",
+      "email": "amit@gmail.com",
+      "password": "12345678",
+      "phone": "543483484349",
+      "gender": "Male",
+      "dob": "",
+      "address": {
+        "line1": "",
+        "line2": ""
+      },
+      "image": "http://192.168.1.110:4000/uploads/profile_1779614322328.jpeg"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": "appt_1779615316973",
+      "userId": "user_1779614286751",
+      "docId": "doc6",
+      "userData": {
+        "name": "Amit",
+        "email": "amit@gmail.com",
+        "phone": "543483484349",
+        "dob": "",
+        "gender": "Male",
+        "address": {
+          "line1": "",
+          "line2": ""
+        },
+        "image": "http://192.168.1.110:4000/uploads/profile_1779614322328.jpeg"
+      },
+      "docData": {
+        "_id": "doc6",
+        "name": "Dr. Andrew Williams",
+        "imageKey": "doc6",
+        "speciality": "Neurologist",
+        "degree": "MBBS",
+        "experience": "4 Years",
+        "about": "Dr. Andrew Williams is a senior neurologist with deep expertise in movement disorders, neurodegenerative diseases, and clinical neurophysiology. He is highly regarded for his diagnostic precision and patient empathy.",
+        "fees": 50,
+        "address": {
+          "line1": "57th Cross, Richmond",
+          "line2": "Circle, Ring Road, London"
+        },
+        "available": true,
+        "image": "http://192.168.1.110:4000/images/doc6.png"
+      },
+      "amount": 50,
+      "slotDate": "25_5_2026",
+      "slotTime": "10:30 am",
+      "date": 1779615316974,
+      "cancelled": false,
+      "isCompleted": false
+    }
+  ]
+}

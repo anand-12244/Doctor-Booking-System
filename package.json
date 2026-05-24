@@ -6,13 +6,29 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "mock-server": "node mock-server.js"
   },
   "dependencies": {
-    "expo": "~54.0.33",
-    "expo-status-bar": "~3.0.9",
-    "react": "19.1.0",
-    "react-native": "0.81.5"
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-navigation/native": "^7.2.2",
+    "@react-navigation/native-stack": "^7.14.12",
+    "axios": "^1.16.0",
+    "cors": "^2.8.5",
+    "expo": "^55.0.19",
+    "expo-dev-client": "~55.0.35",
+    "expo-image-picker": "~55.0.19",
+    "expo-status-bar": "~55.0.5",
+    "json-server": "^0.17.4",
+    "multer": "^1.4.5-lts.1",
+    "react": "19.2.0",
+    "react-native": "0.83.6",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-screens": "~4.23.0",
+    "react-native-svg": "15.15.3"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "react-native-svg-transformer": "^1.5.3"
+  }
 }
