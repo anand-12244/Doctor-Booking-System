@@ -9,6 +9,13 @@ const PORT = 4000;
 const DB_FILE = path.join(__dirname, 'db.json');
 const UPLOADS_DIR = path.join(__dirname, 'uploads');
 
+// Helper to get base URL with secure protocol on production
+function getBaseUrl(req) {
+  const host = req.get('host');
+  const protocol = host.includes('localhost') || host.includes('127.0.0.1') ? 'http' : 'https';
+  return `${protocol}://${host}`;
+}
+
 // Create uploads directory if it doesn't exist
 if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
@@ -287,7 +294,7 @@ server.get('/api/doctor/list', (req, res) => {
   const doctors = router.db.get('doctors').value() || [];
   const formattedDoctors = doctors.map(doc => ({
     ...doc,
-    image: `${req.protocol}://${req.get('host')}/images/${doc.imageKey}.png`
+    image: `${getBaseUrl(req)}/images/${doc.imageKey}.png`
   }));
   res.json({ success: true, doctors: formattedDoctors });
 });
@@ -372,7 +379,7 @@ server.post('/api/user/update-profile', upload.single('image'), authUser, (req, 
   };
 
   if (req.file) {
-    updates.image = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+    updates.image = `${getBaseUrl(req)}/uploads/${req.file.filename}`;
   }
 
   router.db.get('users').find({ _id: req.userId }).assign(updates).write();
@@ -411,7 +418,7 @@ server.post('/api/user/book-appointment', authUser, (req, res) => {
   const appointmentId = `appt_${Date.now()}`;
   const docInfoForAppt = { ...doctor };
   delete docInfoForAppt.slots_booked;
-  docInfoForAppt.image = `${req.protocol}://${req.get('host')}/images/${docInfoForAppt.imageKey}.png`;
+  docInfoForAppt.image = `${getBaseUrl(req)}/images/${docInfoForAppt.imageKey}.png`;
 
   const newAppointment = {
     _id: appointmentId,
