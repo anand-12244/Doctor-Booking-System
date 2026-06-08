@@ -14,7 +14,22 @@
         "line2": "Circle, Ring Road, London"
       },
       "available": true,
-      "slots_booked": {}
+      "slots_booked": {
+        "28_5_2026": [
+          "10:30 AM",
+          "11:00 AM"
+        ],
+        "31_5_2026": [
+          "11:30 AM",
+          "12:00 PM"
+        ],
+        "5_6_2026": [
+          "12:30 PM"
+        ],
+        "6_6_2026": [
+          "11:00 AM"
+        ]
+      }
     },
     {
       "_id": "doc2",
@@ -46,7 +61,11 @@
         "line2": "Circle, Ring Road, London"
       },
       "available": true,
-      "slots_booked": {}
+      "slots_booked": {
+        "29_5_2026": [
+          "11:00 AM"
+        ]
+      }
     },
     {
       "_id": "doc4",
@@ -62,7 +81,14 @@
         "line2": "Circle, Ring Road, London"
       },
       "available": true,
-      "slots_booked": {}
+      "slots_booked": {
+        "28_5_2026": [
+          "10:30 AM"
+        ],
+        "27_5_2026": [
+          "04:30 PM"
+        ]
+      }
     },
     {
       "_id": "doc5",
@@ -247,10 +273,7 @@
   ],
   "users": [
     {
-      "_id": "user_1779614286751",
       "name": "Amit",
-      "email": "amit@gmail.com",
-      "password": "12345678",
       "phone": "543483484349",
       "gender": "Male",
       "dob": "",
@@ -258,7 +281,38 @@
         "line1": "",
         "line2": ""
       },
-      "image": "http://192.168.1.110:4000/uploads/profile_1779614322328.jpeg"
+      "password": "",
+      "email": "amit@gmail.com",
+      "image": "blob:http://localhost:8081/a4ed725e-a6ff-412f-8f62-94aaeaf66954",
+      "_id": "user_1779614286751"
+    },
+    {
+      "name": "Ashish",
+      "email": "ashish@gmail.com",
+      "password": "12345678",
+      "phone": "",
+      "gender": "Not Selected",
+      "dob": "",
+      "address": {
+        "line1": "",
+        "line2": ""
+      },
+      "image": "",
+      "_id": "o3lsqC_"
+    },
+    {
+      "name": "",
+      "email": "amit@gmail.com",
+      "password": "12345678",
+      "phone": "",
+      "gender": "Not Selected",
+      "dob": "",
+      "address": {
+        "line1": "",
+        "line2": ""
+      },
+      "image": "",
+      "_id": "oJMFkqF"
     }
   ],
   "appointments": [
@@ -298,6 +352,120 @@
       "slotDate": "25_5_2026",
       "slotTime": "10:30 am",
       "date": 1779615316974,
+      "cancelled": false,
+      "isCompleted": false
+    },
+    {
+      "_id": "appt_1779871344244",
+      "userId": "user_1779614286751",
+      "docId": "doc1",
+      "userData": {
+        "name": "Amit",
+        "email": "amit@gmail.com",
+        "phone": "543483484349",
+        "dob": "",
+        "gender": "Male",
+        "address": {
+          "line1": "",
+          "line2": ""
+        },
+        "image": "http://192.168.1.110:4000/uploads/profile_1779614322328.jpeg"
+      },
+      "docData": {
+        "_id": "doc1",
+        "name": "Dr. Richard James",
+        "imageKey": "doc1",
+        "speciality": "General physician",
+        "degree": "MBBS",
+        "experience": "4 Years",
+        "about": "Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. He specializes in managing chronic diseases and promoting overall wellness.",
+        "fees": 50,
+        "address": {
+          "line1": "17th Cross, Richmond",
+          "line2": "Circle, Ring Road, London"
+        },
+        "available": true
+      },
+      "amount": 50,
+      "slotDate": "28_5_2026",
+      "slotTime": "10:30 AM",
+      "date": 1779871344244,
+      "cancelled": false,
+      "isCompleted": false
+    },
+    {
+      "_id": "appt_1779871351106",
+      "userId": "user_1779614286751",
+      "docId": "doc1",
+      "userData": {
+        "name": "Amit",
+        "email": "amit@gmail.com",
+        "phone": "543483484349",
+        "dob": "",
+        "gender": "Male",
+        "address": {
+          "line1": "",
+          "line2": ""
+        },
+        "image": "http://192.168.1.110:4000/uploads/profile_1779614322328.jpeg"
+      },
+      "docData": {
+        "_id": "doc1",
+        "name": "Dr. Richard James",
+        "imageKey": "doc1",
+        "speciality": "General physician",
+        "degree": "MBBS",
+        "experience": "4 Years",
+        "about": "Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. He specializes in managing chronic diseases and promoting overall wellness.",
+        "fees": 50,
+        "address": {
+          "line1": "17th Cross, Richmond",
+          "line2": "Circle, Ring Road, London"
+        },
+        "available": true
+      },
+      "amount": 50,
+      "slotDate": "28_5_2026",
+      "slotTime": "11:00 AM",
+      "date": 1779871351106,
+      "cancelled": false,
+      "isCompleted": false
+    },
+    {
+      "_id": "appt_1780466899850",
+      "userId": "oJMFkqF",
+      "docId": "doc1",
+      "userData": {
+        "name": "",
+        "email": "amit@gmail.com",
+        "phone": "",
+        "dob": "",
+        "gender": "Not Selected",
+        "address": {
+          "line1": "",
+          "line2": ""
+        },
+        "image": ""
+      },
+      "docData": {
+        "_id": "doc1",
+        "name": "Dr. Richard James",
+        "imageKey": "doc1",
+        "speciality": "General physician",
+        "degree": "MBBS",
+        "experience": "4 Years",
+        "about": "Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. He specializes in managing chronic diseases and promoting overall wellness.",
+        "fees": 50,
+        "address": {
+          "line1": "17th Cross, Richmond",
+          "line2": "Circle, Ring Road, London"
+        },
+        "available": true
+      },
+      "amount": 50,
+      "slotDate": "6_6_2026",
+      "slotTime": "11:00 AM",
+      "date": 1780466899850,
       "cancelled": false,
       "isCompleted": false
     }

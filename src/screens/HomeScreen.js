@@ -1,15 +1,16 @@
-import React, { useContext, useState, useCallback } from 'react';
-import { StyleSheet, ScrollView, RefreshControl } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { AppContext } from '../context/AppContext';
+import React, { useContext, useState, useCallback } from "react";
+import { StyleSheet, ScrollView, RefreshControl } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { AppContext } from "../context/AppContext";
 
 // Components
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import SpecialityMenu from '../components/SpecialityMenu';
-import TopDoctors from '../components/TopDoctors';
-import Banner from '../components/Banner';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import SpecialityMenu from "../components/SpecialityMenu";
+import AIBanner from "../components/AIBanner";
+import TopDoctors from "../components/TopDoctors";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const HomeScreen = ({ navigation }) => {
   const { getDoctors } = useContext(AppContext);
@@ -24,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
     }
   }, [getDoctors]);
   return (
-    <SafeAreaView style={styles.main} edges={['top']}>
+    <SafeAreaView style={styles.main} edges={["top"]}>
       <Navbar navigation={navigation} currentRoute="Home" />
       <ScrollView
         style={styles.container}
@@ -33,13 +34,14 @@ const HomeScreen = ({ navigation }) => {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            colors={['#5f6FFF']}
+            colors={["#5f6FFF"]}
             tintColor="#5f6FFF"
           />
         }
       >
         <Header navigation={navigation} />
         <SpecialityMenu navigation={navigation} />
+        <AIBanner navigation={navigation} />
         <TopDoctors navigation={navigation} />
         <Banner navigation={navigation} />
         <Footer navigation={navigation} />
@@ -51,7 +53,7 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   container: {
     flex: 1,

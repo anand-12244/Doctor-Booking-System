@@ -15,6 +15,7 @@ import MyAppointmentsScreen from './src/screens/MyAppointmentsScreen';
 import AppointmentScreen   from './src/screens/AppointmentScreen';
 import SearchScreen        from './src/screens/SearchScreen';
 import FavouritesScreen    from './src/screens/FavouritesScreen';
+import SymptomCheckerScreen from './src/screens/SymptomCheckerScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,7 @@ export default function App() {
           <NavigationContainer>
             <Stack.Navigator
               initialRouteName="Home"
-              screenOptions={{ headerShown: false }}   // globally hide default headers
+              screenOptions={{ headerShown: false }}   
             >
               <Stack.Screen name="Home"           component={HomeScreen} />
               <Stack.Screen name="Doctors"        component={DoctorsScreen} />
@@ -38,6 +39,7 @@ export default function App() {
               <Stack.Screen name="Appointment"    component={AppointmentScreen} />
               <Stack.Screen name="Search"         component={SearchScreen} />
               <Stack.Screen name="Favourites"     component={FavouritesScreen} />
+              <Stack.Screen name="SymptomChecker" component={SymptomCheckerScreen} />
             </Stack.Navigator>
           </NavigationContainer>
         </FavouritesProvider>

@@ -58,6 +58,29 @@ export const assets = {
     razorpay_logo
 }
 
+// Static map: doctor _id → local require() image
+// Must be static (no dynamic require) to work on both native & web
+export const doctorImageMap = {
+    doc1,
+    doc2,
+    doc3,
+    doc4,
+    doc5,
+    doc6,
+    doc7,
+    doc8,
+    doc9,
+    doc10,
+    doc11,
+    doc12,
+    doc13,
+    doc14,
+    doc15,
+}
+
+// Helper: returns correct Image source for a doctor by _id or imageKey
+export const getDoctorImage = (key) => doctorImageMap[key] || null
+
 export const specialityData = [
     {
         speciality: 'General physician',

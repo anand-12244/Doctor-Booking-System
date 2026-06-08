@@ -1,11 +1,12 @@
 import React, { useContext, useState, useCallback } from 'react';
 import {
   View, Text, StyleSheet, TextInput, Image,
-  TouchableOpacity, ScrollView, ActivityIndicator,
+  TouchableOpacity, ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppContext } from '../context/AppContext';
 import { FavouritesContext } from '../context/FavouritesContext';
+import { getDoctorImage } from '../assets/assets';
 
 const PRIMARY = '#5f6FFF';
 
@@ -28,7 +29,7 @@ const SearchScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={s.safe} edges={['top']}>
-      {/* ── Header ────────────────────────────────────────────────────────── */}
+      {/* Header */}
       <View style={s.header}>
         <TouchableOpacity onPress={() => navigation.goBack()} style={s.backBtn}>
           <Text style={s.backText}>←</Text>
@@ -53,7 +54,7 @@ const SearchScreen = ({ navigation }) => {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 30 }}>
-        {/* ── No query → show speciality chips ──────────────────────────── */}
+
         {query.trim().length === 0 && (
           <View style={s.section}>
             <Text style={s.sectionTitle}>Browse by Speciality</Text>
@@ -72,7 +73,7 @@ const SearchScreen = ({ navigation }) => {
           </View>
         )}
 
-        {/* ── Results ───────────────────────────────────────────────────── */}
+        {/* Results */}
         {query.trim().length > 0 && (
           <View style={s.section}>
             <Text style={s.sectionTitle}>
@@ -94,7 +95,11 @@ const SearchScreen = ({ navigation }) => {
                   activeOpacity={0.85}
                 >
                   <View style={s.resultImgWrap}>
-                    <Image source={{ uri: doc.image }} style={s.resultImg} resizeMode="contain" />
+                    <Image
+                      source={getDoctorImage(doc.imageKey || doc._id)}
+                      style={s.resultImg}
+                      resizeMode="contain"
+                    />
                   </View>
                   <View style={s.resultInfo}>
                     <Text style={s.resultName}>{doc.name}</Text>
@@ -169,7 +174,7 @@ const s = StyleSheet.create({
     backgroundColor: '#fff', borderRadius: 14,
     borderWidth: 1, borderColor: '#E5E7EB',
     padding: 12, marginBottom: 12,
-    elevation: 1, shadowColor: '#000', shadowOpacity: 0.04, shadowRadius: 4,
+    boxShadow: '0px 1px 4px rgba(0,0,0,0.04)',
   },
   resultImgWrap: {
     width: 68, height: 68, borderRadius: 12,

@@ -138,9 +138,7 @@ const styles = StyleSheet.create({
     padding: 24,
     gap: 10,
     backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOpacity: 0.04,
-    shadowRadius: 6,
+    boxShadow: '0px 2px 6px rgba(0,0,0,0.04)',
     elevation: 2,
   },
   cardTitle: {

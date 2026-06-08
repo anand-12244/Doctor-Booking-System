@@ -6,6 +6,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppContext } from '../context/AppContext';
 import { FavouritesContext } from '../context/FavouritesContext';
+import { getDoctorImage } from '../assets/assets';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -54,7 +55,11 @@ const DoctorsScreen = ({ route, navigation }) => {
       activeOpacity={0.85}
     >
       <View style={styles.cardImageWrap}>
-        <Image source={{ uri: item.image }} style={styles.cardImage} resizeMode="contain" />
+        <Image
+          source={getDoctorImage(item.imageKey || item._id)}
+          style={styles.cardImage}
+          resizeMode="contain"
+        />
       </View>
       {/* Heart button */}
       <TouchableOpacity
@@ -81,7 +86,6 @@ const DoctorsScreen = ({ route, navigation }) => {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <Navbar navigation={navigation} currentRoute="Doctors" />
 
-      {/* Using ScrollView so Footer scrolls naturally with content */}
       <ScrollView
         style={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -97,7 +101,7 @@ const DoctorsScreen = ({ route, navigation }) => {
       >
         <Text style={styles.pageTitle}>Browse through the doctors specialist.</Text>
 
-        {/* ── Speciality Filter Chips ───────────────────────────────────── */}
+        {/* Speciality Filter Chips */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -123,7 +127,7 @@ const DoctorsScreen = ({ route, navigation }) => {
           ))}
         </ScrollView>
 
-        {/* ── Doctor Grid ───────────────────────────────────────────────── */}
+        {/* Doctor Grid */}
         {doctors.length === 0 ? (
           <View style={styles.center}>
             <ActivityIndicator size="large" color="#5f6FFF" />
@@ -159,7 +163,6 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
 
-  // Filter chips
   filterScroll: { maxHeight: 44, marginBottom: 16 },
   filterRow: {
     paddingHorizontal: 16,
@@ -183,7 +186,6 @@ const styles = StyleSheet.create({
   chipText: { fontSize: 13, color: '#4B5563' },
   chipTextActive: { color: '#5f6FFF', fontWeight: '600' },
 
-  // Grid
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -191,7 +193,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
-  // Doctor Card
   card: {
     width: '48%',
     backgroundColor: '#fff',
@@ -200,10 +201,7 @@ const styles = StyleSheet.create({
     borderColor: '#BFDBFE',
     marginBottom: 16,
     overflow: 'hidden',
-    elevation: 1,
-    shadowColor: '#000',
-    shadowOpacity: 0.04,
-    shadowRadius: 4,
+    boxShadow: '0px 1px 4px rgba(0,0,0,0.04)',
     position: 'relative',
   },
   heartBtn: {
