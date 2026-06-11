@@ -1,8 +1,8 @@
 # Native
 
-# CareConnect - Doctor Booking Native App[pdf24_converted (2).pdf](https://github.com/user-attachments/files/28831113/pdf24_converted.2.pdf)
+# CareConnect - Doctor Booking Native App(https://github.com/user-attachments/files/28831113/pdf24_converted.2.pdf)
 
-Download the porject screenshot using this link---
+Download the project screenshot using this link---
 
 https://github.com/user-attachments/files/28831113/pdf24_converted.2.pdf
 
